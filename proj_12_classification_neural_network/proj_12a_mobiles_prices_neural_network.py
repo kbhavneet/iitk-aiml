@@ -84,21 +84,6 @@ model.compile(
     metrics=['accuracy']
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
-
 ytestoh = oh.fit_transform(ytest).toarray()
 history = model.fit(Xtrain, ytrain, epochs=200, batch_size=100,validation_data=(Xtest,ytestoh)) 
                     
